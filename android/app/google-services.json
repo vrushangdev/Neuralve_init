@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "749466926141",
+    "firebase_url": "https://lastday-a5537.firebaseio.com",
+    "project_id": "lastday-a5537",
+    "storage_bucket": "lastday-a5537.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749466926141:android:c3f0b72668990e1c05fe54",
+        "android_client_info": {
+          "package_name": "me.neuralve.neuralve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749466926141-mb3mm2f2qc34mugklho5oqn4mtdgvmke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx5rqc1tOX1L2IWbFpBYGuxkd0A1Z-Tks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749466926141-mb3mm2f2qc34mugklho5oqn4mtdgvmke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
