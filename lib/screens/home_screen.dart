@@ -1,5 +1,6 @@
-
+import '../widgets/clock_painter.dart';
 import 'package:flutter/material.dart';
+import 'package:neuralve/widgets/clock_painter.dart';
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -18,12 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
             pinned: true,
             forceElevated: true,
             expandedHeight: 100.0,
-            leading: IconButton(
-                icon: Icon(Icons.bluetooth_searching),
-                iconSize: 30.0,
-//                Todo Use Share Package to open and connect via bluetooth .
-                onPressed: (){},
-            ),
+
+
             flexibleSpace: FlexibleSpaceBar(
               title: Text('Welcome Onboard !',
               style: TextStyle(
@@ -34,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             actions: <Widget>[
               IconButton(
-                icon: Icon(Icons.timelapse),
+                icon: Icon(Icons.account_circle),
                 iconSize: 30.0,
 //Todo Implement Navigation to timer screen
                 onPressed: (){},
@@ -44,14 +41,78 @@ class _HomeScreenState extends State<HomeScreen> {
           SliverList(
             delegate: SliverChildBuilderDelegate(
                 (BuildContext context,int index){
-                  return Placeholder(
-                    color: Colors.red,
-                    fallbackHeight: 100.0,
+                  return  Card(
+                    child: Container(
+                      width: 100.0,
+                      padding: EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: <Widget>[
+                              Icon(Icons.arrow_back_ios),
+                              Text("11 March"),
+                              Icon(Icons.arrow_forward_ios)
+
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+
+                                child: SizedBox(
+                                  height: 300.0,
+                                  width: 100.0,
+                                  child: CustomPaint(
+                                    painter: ClockPainter(),
+                                    child: Container(height: 100,
+                                    ),
+                                    ),
+                                ),
+
+                              ),
+
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: <Widget>[
+                              Chip(
+
+                                backgroundColor: Colors.black,
+                                avatar: CircleAvatar(
+
+                                  backgroundColor: Colors.black,
+                                  child: Icon(Icons.filter_center_focus,color: Colors.white,),
+                                ),
+                                label: Text('Focus',
+                                style: TextStyle(
+                                  color: Colors.white
+                                ),
+                                ),
+                              ),
+                              Chip(
+
+                                backgroundColor: Colors.black,
+                                avatar: CircleAvatar(
+
+                                  backgroundColor: Colors.black,
+                                  child: Icon(Icons.favorite,color: Colors.white,),
+                                ),
+                                label: Text('Rest',
+                                style: TextStyle(color: Colors.white),),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    )
 
                   );
 
                 },
-              childCount: 10,
+              childCount: 1,
             ),
           ),
 
@@ -59,6 +120,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
 
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        child: Icon(Icons.notifications_active),
+        ),
+     
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(

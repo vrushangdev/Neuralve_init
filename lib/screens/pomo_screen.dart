@@ -28,7 +28,6 @@ class _PomoScreenState extends State<PomoScreen> with TickerProviderStateMixin {
         child: Column(
           children: <Widget>[
             Container(
-              child: ,
               margin: EdgeInsets.all(20.0),
               padding: EdgeInsets.all(20.0),
               height: 250.0,
